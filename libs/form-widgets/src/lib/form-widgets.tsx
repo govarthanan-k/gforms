@@ -1,9 +1,11 @@
 export interface TextInputProps {
+  /** The label to display above the text input */
   label: string;
+  /** Called when the value of text input changes */
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const TextInput: React.FC<TextInputProps> = ({ label, value, onChange }) => {
+const TextInput = ({ label, onChange }: TextInputProps) => {
   const styles = {
     container: {
       display: "flex",
