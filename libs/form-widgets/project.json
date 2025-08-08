@@ -1,4 +1,6 @@
 {
+  "name": "@gova/form-widgets",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "targets": {
     "storybook": {
       "executor": "@nx/storybook:storybook",
@@ -6,6 +8,18 @@
         "port": 6006,
         "configDir": "libs/form-widgets/.storybook",
         "open": true
+      }
+    },
+    "test": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "vitest --config=libs/form-widgets/vitest.storybook.config.ts"
+      }
+    },
+    "test:coverage": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "vitest run --coverage --config=libs/form-widgets/vitest.storybook.config.ts"
       }
     }
   }
