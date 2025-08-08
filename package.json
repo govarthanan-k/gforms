@@ -6,6 +6,7 @@
   "private": true,
   "devDependencies": {
     "@nx/js": "21.3.11",
+    "@nx/react": "^21.3.11",
     "@nx/vite": "^21.3.11",
     "@nx/web": "21.3.11",
     "@swc-node/register": "~1.9.1",
@@ -23,5 +24,8 @@
   "workspaces": [
     "packages/*"
   ],
-  "dependencies": {}
+  "dependencies": {
+    "react": "19.0.0",
+    "react-dom": "19.0.0"
+  }
 }
